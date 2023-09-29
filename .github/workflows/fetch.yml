@@ -24,17 +24,18 @@ jobs:
       with:
         python-version: '3.x'
         cache: 'pip'
-    - name: 设置时区
-    - run: sudo timedatectl set-timezone 'Asia/Shanghai'
+    # - name: 设置时区
+    # - run: sudo timedatectl set-timezone 'Asia/Shanghai'
+    # git config --local user.email "2268402883@qq.com"
+    # git config --local user.name "十七"
+
     - name: 安装依赖
       run: pip install -r requirements.txt
     - name: 执行任务
       run: python ./fetch.py
-      
+
     - name: 提交更改
-      run: |                 
-        git config --local user.email "2268402883@qq.com"
-        git config --local user.name "十七"
+      run: |
         git pull origin master
         git add list*
         git add snippets/
