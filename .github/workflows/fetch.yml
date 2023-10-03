@@ -36,12 +36,13 @@ jobs:
 
     - name: 提交更改
       run: |
-        git config --global user.name "十七"
-        git config --global user.email "foreverbonfy@163.com"
-        
-        git add -A
-        git commit -m $(date '+%Y-%m-%d')
-        git push
+        git config --local user.email "2268402883@qq.com"
+        git config --local user.name "十七"
+        git pull origin main
+        git add list*
+        git add snippets/
+        git commit -m "$(date '+%Y-%m-%d %H:%M:%S') 抓取节点"
+
 
     # - name: 推送更改
       # uses: ad-m/github-push-action@main
