@@ -42,6 +42,7 @@ jobs:
         git add list*
         git add snippets/
         git commit -m "$(date '+%Y-%m-%d %H:%M:%S') 抓取节点"
+        git push
     # - name: 推送更改
       # uses: ad-m/github-push-action@main
       # with:
