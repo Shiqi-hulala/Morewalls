@@ -36,7 +36,8 @@ jobs:
 
     - name: 提交更改
       run: |
-
+        git config --local user.email "2268402883@qq.com"
+        git config --local user.name "十七"
         git pull origin main
         git add list*
         git add snippets/
@@ -47,5 +48,4 @@ jobs:
       # with:
         # branch: mian
 
-        # git config --local user.email "十七"
-        # git config --local user.name "2268402883@qq.com"
+        
